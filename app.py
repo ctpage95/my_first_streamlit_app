@@ -147,7 +147,7 @@ st.markdown(
 '''
 )
 airports = pd.read_csv("airports.csv")
-states = alt.topo_feature(data.us_10m.url, feature='states')
+states = alt.topo_feature("states.json", feature='states')
 
 # US states background
 background = alt.Chart(states).mark_geoshape(
